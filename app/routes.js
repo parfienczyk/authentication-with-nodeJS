@@ -7,6 +7,11 @@ module.exports = function(app, passport) {
 		res.render('index.ejs');
 	});
 
+    // CONTACT =========================
+    app.get('/contact', function(req, res) {
+        res.render('contact.ejs');
+    });
+
 	// PROFILE SECTION =========================
 	app.get('/profile', isLoggedIn, function(req, res) {
 		res.render('profile.ejs', {
